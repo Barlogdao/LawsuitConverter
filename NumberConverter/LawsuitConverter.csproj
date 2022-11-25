@@ -1,0 +1,48 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ApplicationIcon>LawsuitConverter_icon.ico</ApplicationIcon>
+    <Win32Resource />
+    <Product>Lawsuit Converter</Product>
+    <Authors>Barlogdao</Authors>
+    <Company>Barlogdao Studio</Company>
+    <AssemblyName>Lawsuit Converter</AssemblyName>
+    <Description>Программа, которая определяет общую сумму иска путем сложения основной задолженности и неустойки и конверитрует все суммы в прописной вариант, используемый при составлении исковых заявлений.</Description>
+    <Copyright>Александр Федотов, 2022</Copyright>
+    <PackageId>Lawsuit Converter</PackageId>
+    <PackageIcon></PackageIcon>
+    <PackageIconUrl />
+    <AssemblyVersion>1.0.0.2</AssemblyVersion>
+    <StartupObject>NumberConverter.Program</StartupObject>
+    <Title>Lawsuit Converter</Title>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DebugType>none</DebugType>
+    <DebugSymbols>false</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="LawsuitConverter_icon.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Settings.Designer.cs">
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+
+</Project>
